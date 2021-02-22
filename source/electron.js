@@ -154,6 +154,9 @@ host.ElectronHost = class {
         electron.ipcRenderer.on('zoom-out', () => {
             this.document.getElementById('zoom-out-button').click();
         });
+        electron.ipcRenderer.on('select-mode', () => {
+            this.document.getElementById('select-mode-button').click();
+        });
         electron.ipcRenderer.on('reset-zoom', () => {
             this._view.resetZoom();
         });

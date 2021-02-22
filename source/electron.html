@@ -18,6 +18,7 @@ body { touch-action: none; margin: 0; width: 100vw; height: 100vh; font-family: 
 .toolbar { position: absolute; top: 10px; left: 10px; padding: 0; margin: 0; user-select: none; -webkit-user-select: none; -moz-user-select: none; }
 .toolbar-button { background: None; border-radius: 6px; border: 0; margin: 0; padding: 0; fill: None; stroke: #777; cursor: hand; width: 24px; height: 24px; }
 .toolbar button:focus { outline: 0; }
+.toolbar-button.selected { background: lightgray; }
 .icon .border { stroke: #fff; }
 .icon .stroke { stroke: #808080; }
 .icon:hover .stroke { stroke: #000000; }
@@ -139,6 +140,47 @@ body { touch-action: none; margin: 0; width: 100vw; height: 100vh; font-family: 
             <circle class="stroke" cx="50" cy="50" r="35" stroke-width="4"></circle>
             <line class="stroke" x1="38" y1="50" x2="62" y2="50" stroke-width="4" stroke-linecap="round"></line>
             <line class="stroke" x1="78" y1="78" x2="82" y2="82" stroke-width="8" stroke-linecap="square"></line>
+        </svg>
+    </button>
+    <button id="select-mode-button" class="toolbar-button" title="Select">
+        <svg class="icon" viewbox="0 0 100 100">
+            <line class="border" x1="12" y1="20" x2="24" y2="20" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="border" x1="36" y1="20" x2="48" y2="20" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="border" x1="60" y1="20" x2="72" y2="20" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+
+            <line class="border" x1="12" y1="70" x2="24" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="border" x1="36" y1="70" x2="48" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="border" x1="60" y1="70" x2="72" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+
+            <line class="border" x1="12" y1="20" x2="12" y2="30" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="border" x1="12" y1="40" x2="12" y2="50" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="border" x1="12" y1="60" x2="12" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+
+            <line class="border" x1="70" y1="20" x2="70" y2="30" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="border" x1="70" y1="40" x2="70" y2="50" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="border" x1="70" y1="60" x2="70" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+
+            <line class="border" x1="74" y1="82" x2="92" y2="82" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="border" x1="84" y1="72" x2="84" y2="92" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+
+            <line class="stroke" x1="12" y1="20" x2="24" y2="20" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="stroke" x1="36" y1="20" x2="48" y2="20" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="stroke" x1="60" y1="20" x2="72" y2="20" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+
+            <line class="stroke" x1="12" y1="70" x2="24" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="stroke" x1="36" y1="70" x2="48" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="stroke" x1="60" y1="70" x2="72" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+
+            <line class="stroke" x1="12" y1="20" x2="12" y2="30" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="stroke" x1="12" y1="40" x2="12" y2="50" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="stroke" x1="12" y1="60" x2="12" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+
+            <line class="stroke" x1="70" y1="20" x2="70" y2="30" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="stroke" x1="70" y1="40" x2="70" y2="50" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="stroke" x1="70" y1="60" x2="70" y2="70" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+
+            <line class="stroke" x1="74" y1="82" x2="92" y2="82" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
+            <line class="stroke" x1="84" y1="72" x2="84" y2="92" stroke-width="4" stroke-linecap="round" stroke="#fff"></line>
         </svg>
     </button>
 </div>

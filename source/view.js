@@ -36,6 +36,9 @@ view.View = class {
             this._getElementById('zoom-out-button').addEventListener('click', () => {
                 this.zoomOut();
             });
+            this._getElementById('select-mode-button').addEventListener('click', (e) => {
+                this.selectMode(e);
+            });
             this._getElementById('sidebar').addEventListener('mousewheel', (e) => {
                 this._preventZoom(e);
             });
@@ -221,6 +224,24 @@ view.View = class {
                     this._zoom.scaleTo(d3.select(this._getElementById('canvas')), 1);
                 }
                 break;
+        }
+    }
+
+    selectMode(e) {
+        if (e.target.nodeName == 'svg') {
+            let selectModeButtonElement = e.target.parentElement;
+            
+            if (selectModeButtonElement.classList.contains('selected')) {
+                selectModeButtonElement.classList.remove('selected');
+                this._zoom.on('zoom', (event) => {
+                    let originElement = document.getElementById('origin');
+                    console.log(event.transform);
+                    originElement.setAttribute('transform', event.transform.toString());
+                });
+            } else {
+                selectModeButtonElement.classList.add('selected');
+                this._zoom.on('zoom', null);
+            }
         }
     }
 
